@@ -1,0 +1,250 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".ScheduledClassesInstructor"
+    android:background="#9e9b9b">
+    <ScrollView
+        android:id="@+id/scrollView2"
+        android:layout_width="365dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="140dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/toolbar2"
+        app:layout_constraintVertical_bias="0.0">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <LinearLayout
+                android:id="@+id/availableClassesLayout"
+                android:layout_width="match_parent"
+                android:layout_height="520dp"
+                android:orientation="vertical">
+
+                <ListView
+                    android:id="@+id/availableClassesInstr"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/round" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/classInfo"
+                android:layout_width="335dp"
+                android:layout_height="522dp"
+                android:layout_centerInParent="true"
+                android:background="@drawable/round"
+                android:orientation="vertical"
+                android:visibility="gone"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent">
+
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent">
+
+                    <TextView
+                        android:id="@+id/classNameLabel"
+                        android:layout_width="107dp"
+                        android:layout_height="25dp"
+                        android:layout_marginTop="44dp"
+                        android:text="Class Name"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintHorizontal_bias="0.118"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent" />
+
+                    <TextView
+                        android:id="@+id/actualClassName"
+                        android:layout_width="131dp"
+                        android:layout_height="26dp"
+                        android:layout_marginStart="32dp"
+                        android:layout_marginTop="44dp"
+                        android:text="TextView"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintHorizontal_bias="0.315"
+                        app:layout_constraintStart_toEndOf="@+id/classNameLabel"
+                        app:layout_constraintTop_toTopOf="parent" />
+
+                    <TextView
+                        android:id="@+id/dayLabel"
+                        android:layout_width="95dp"
+                        android:layout_height="30dp"
+                        android:layout_marginStart="24dp"
+                        android:layout_marginTop="24dp"
+                        android:text="Day :"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toBottomOf="@+id/classNameLabel" />
+
+                    <TextView
+                        android:id="@+id/classDay"
+                        android:layout_width="130dp"
+                        android:layout_height="28dp"
+                        android:layout_marginStart="48dp"
+                        android:layout_marginTop="24dp"
+                        android:text="TextView"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintHorizontal_bias="0.289"
+                        app:layout_constraintStart_toEndOf="@+id/dayLabel"
+                        app:layout_constraintTop_toBottomOf="@+id/classNameLabel" />
+
+                    <TextView
+                        android:id="@+id/textView15"
+                        android:layout_width="95dp"
+                        android:layout_height="29dp"
+                        android:layout_marginStart="24dp"
+                        android:layout_marginTop="16dp"
+                        android:text="Time"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toBottomOf="@+id/dayLabel" />
+
+                    <TextView
+                        android:id="@+id/classTime"
+                        android:layout_width="116dp"
+                        android:layout_height="29dp"
+                        android:layout_marginStart="44dp"
+                        android:layout_marginTop="16dp"
+                        android:text="TextView"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintHorizontal_bias="0.267"
+                        app:layout_constraintStart_toEndOf="@+id/textView15"
+                        app:layout_constraintTop_toBottomOf="@+id/dayLabel" />
+
+                    <TextView
+                        android:id="@+id/classInstructorLabel"
+                        android:layout_width="95dp"
+                        android:layout_height="28dp"
+                        android:layout_marginStart="24dp"
+                        android:layout_marginTop="20dp"
+                        android:text="Instructor"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toBottomOf="@+id/textView15" />
+
+                    <TextView
+                        android:id="@+id/classInstructor"
+                        android:layout_width="131dp"
+                        android:layout_height="31dp"
+                        android:layout_marginStart="48dp"
+                        android:layout_marginTop="20dp"
+                        android:text="TextView"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintHorizontal_bias="0.297"
+                        app:layout_constraintStart_toEndOf="@+id/classInstructorLabel"
+                        app:layout_constraintTop_toBottomOf="@+id/textView15" />
+
+                    <Button
+                        android:id="@+id/confirmEnroll"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="80dp"
+                        android:text="Enroll"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toBottomOf="@+id/maxCapLabel" />
+
+                    <TextView
+                        android:id="@+id/maxCapLabel"
+                        android:layout_width="119dp"
+                        android:layout_height="35dp"
+                        android:layout_marginStart="24dp"
+                        android:layout_marginTop="16dp"
+                        android:text="Maximum Capacity"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toBottomOf="@+id/numberOfUsersLabel" />
+
+                    <TextView
+                        android:id="@+id/numberOfUsersLabel"
+                        android:layout_width="118dp"
+                        android:layout_height="30dp"
+                        android:layout_marginStart="24dp"
+                        android:layout_marginTop="28dp"
+                        android:text="Number of Users"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toBottomOf="@+id/classInstructorLabel" />
+
+                    <TextView
+                        android:id="@+id/numberOfUsers"
+                        android:layout_width="114dp"
+                        android:layout_height="32dp"
+                        android:layout_marginStart="36dp"
+                        android:layout_marginTop="28dp"
+                        android:text="TextView"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintHorizontal_bias="0.0"
+                        app:layout_constraintStart_toEndOf="@+id/numberOfUsersLabel"
+                        app:layout_constraintTop_toBottomOf="@+id/classInstructorLabel" />
+
+                    <TextView
+                        android:id="@+id/maxCap"
+                        android:layout_width="111dp"
+                        android:layout_height="31dp"
+                        android:layout_marginStart="28dp"
+                        android:layout_marginTop="16dp"
+                        android:text="TextView"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintHorizontal_bias="0.132"
+                        app:layout_constraintStart_toEndOf="@+id/maxCapLabel"
+                        app:layout_constraintTop_toBottomOf="@+id/numberOfUsersLabel" />
+
+                </androidx.constraintlayout.widget.ConstraintLayout>
+            </LinearLayout>
+        </RelativeLayout>
+    </ScrollView>
+
+    <EditText
+        android:id="@+id/classSearchField"
+        android:layout_width="264dp"
+        android:layout_height="45dp"
+        android:layout_marginEnd="12dp"
+        android:layout_marginBottom="28dp"
+        android:background="@drawable/round_search_field"
+        android:ems="10"
+        android:hint="Enter the class instructor "
+        android:inputType="textPersonName"
+        app:layout_constraintBottom_toTopOf="@+id/scrollView2"
+        app:layout_constraintEnd_toStartOf="@+id/scheduleClassSearchButton"
+        app:layout_constraintTop_toBottomOf="@+id/toolbar2"
+        app:layout_constraintVertical_bias="0.82" />
+
+    <ImageView
+        android:id="@+id/scheduleClassSearchButton"
+        android:layout_width="38dp"
+        android:layout_height="27dp"
+        android:layout_marginTop="72dp"
+        android:layout_marginEnd="44dp"
+        app:layout_constraintBottom_toTopOf="@+id/scrollView2"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.505"
+        app:srcCompat="@drawable/_4px_search_icon_svg" />
+
+    <androidx.appcompat.widget.Toolbar
+        android:id="@+id/toolbar2"
+        android:layout_width="409dp"
+        android:layout_height="wrap_content"
+        android:background="?attr/colorPrimary"
+        android:minHeight="?attr/actionBarSize"
+        android:theme="?attr/actionBarTheme"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <ImageView
+        android:id="@+id/backIcon"
+        android:layout_width="32dp"
+        android:layout_height="36dp"
+        android:layout_marginStart="20dp"
+        app:layout_constraintBottom_toBottomOf="@+id/toolbar2"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/toolbar2"
+        app:srcCompat="@drawable/back_arrow" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

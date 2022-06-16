@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string-array name="times">
+        <item>8:00 am</item>
+        <item>8:30 am</item>
+        <item>9:00 am</item>
+        <item>9:30 am</item>
+        <item>10:00 am</item>
+        <item>10:30 am</item>
+        <item>11:00 am</item>
+        <item>11:30 am</item>
+        <item>12:00 pm</item>
+        <item>12:30 pm</item>
+        <item>1:00 pm</item>
+        <item>1:30 pm</item>
+        <item>2:00 pm</item>
+        <item>2:30 pm</item>
+        <item>3:00 pm</item>
+        <item>3:30 pm</item>
+        <item>4:00 pm</item>
+        <item>4:30 pm</item>
+        <item>5:00 pm</item>
+    </string-array>
+</resources>

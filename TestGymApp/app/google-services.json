@@ -1,0 +1,40 @@
+{
+  "project_info": {
+    "project_number": "927798397463",
+    "firebase_url": "https://app1-53363-default-rtdb.firebaseio.com",
+    "project_id": "app1-53363",
+    "storage_bucket": "app1-53363.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:927798397463:android:7c12a9fa5f26b591056a52",
+        "android_client_info": {
+          "package_name": "com.example.testgymapp"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "927798397463-npjd4m0bi6a1bon0i66ihi12ibh1munq.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCWqnT4fe-lch1HjA2V33-X5HBY7CcRprM"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "927798397463-npjd4m0bi6a1bon0i66ihi12ibh1munq.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

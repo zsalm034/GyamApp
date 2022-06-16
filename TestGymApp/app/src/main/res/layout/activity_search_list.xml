@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="horizontal"
+    android:padding="10dp">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+        <TextView
+            android:id="@+id/nameOfClass"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Class Name Here"
+            android:textColor="#212121"
+            android:textSize="15sp" />
+
+        <TextView
+            android:id="@+id/instuctorName"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Instructor Name Here"
+            android:layout_marginStart="10dp"
+            android:textColor="#212121"
+            android:textSize="15sp"/>
+
+        <TextView
+            android:id="@+id/time"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Time Here"
+            android:layout_marginStart="10dp"
+            android:textColor="#212121"
+            android:textSize="15sp"/>
+    </LinearLayout>
+
+</LinearLayout>

@@ -1,0 +1,265 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".InstructorPage"
+    android:background="@drawable/kick">
+
+    <TextView
+        android:id="@+id/welcomeMessageInstructor"
+        android:layout_width="290dp"
+        android:layout_height="38dp"
+        android:layout_marginTop="96dp"
+        android:layout_marginBottom="17dp"
+        app:layout_constraintBottom_toTopOf="@+id/registeredClassesInst"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.446"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.0" />
+
+    <androidx.appcompat.widget.Toolbar
+        android:id="@+id/memberToolbar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="?attr/colorPrimary"
+        android:minHeight="?attr/actionBarSize"
+        android:theme="?attr/actionBarTheme"
+        app:layout_constraintBottom_toTopOf="@+id/welcomeMessageInstructor"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.0" />
+    <ImageView
+        android:id="@+id/topLeftIcon"
+        android:src="@drawable/nav_bar_left_icon"
+        android:layout_width="38dp"
+        android:layout_height="28dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginBottom="16dp"
+        app:layout_constraintBottom_toBottomOf="@+id/memberToolbar"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="1.0"
+        tools:srcCompat="@tools:sample/avatars" />
+
+    <ImageView
+        android:id="@+id/topRightIcon"
+        android:layout_width="28dp"
+        android:layout_height="28dp"
+        android:src="@drawable/admin_icon"
+        app:layout_constraintBottom_toBottomOf="@+id/memberToolbar"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.957"
+        app:layout_constraintStart_toEndOf="@+id/topLeftIcon"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.428"
+        tools:srcCompat="@tools:sample/avatars" />
+    <com.google.android.material.navigation.NavigationView
+        android:id="@+id/sideNav"
+        android:layout_width="186dp"
+        android:layout_height="wrap_content"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/memberToolbar"
+        app:layout_constraintVertical_bias="0.0"
+        android:visibility="gone"
+        android:background="@drawable/round">
+
+        <ListView
+            android:id="@+id/navMenuOptions"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent" />
+    </com.google.android.material.navigation.NavigationView>
+    <com.google.android.material.navigation.NavigationView
+        android:id="@+id/profileOptionsMenu"
+        android:layout_width="124dp"
+        android:layout_height="wrap_content"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/memberToolbar"
+        android:visibility="gone"
+        android:background="@drawable/round">
+
+        <ListView
+            android:id="@+id/profileOptionsList"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent" />
+    </com.google.android.material.navigation.NavigationView>
+
+    <ScrollView
+        android:id="@+id/registeredClassesInst"
+        android:layout_width="373dp"
+        android:layout_height="wrap_content"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.432"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/memberToolbar"
+        app:layout_constraintVertical_bias="1.0">
+
+        <RelativeLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content">
+
+            <LinearLayout
+                android:id="@+id/enrolledClassesLayout"
+                android:layout_width="match_parent"
+                android:layout_height="530dp"
+                android:orientation="vertical">
+
+                <ListView
+                    android:id="@+id/classList"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent" />
+            </LinearLayout>
+
+            <ScrollView
+                android:id="@+id/instructorClass"
+                android:layout_width="match_parent"
+                android:layout_height="616dp"
+                android:visibility="gone">
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                    <LinearLayout
+                        android:id="@+id/enrolledClassInfo"
+                        android:layout_width="320dp"
+                        android:layout_height="590dp"
+                        android:layout_centerInParent="true"
+                        android:background="@drawable/round"
+                        android:orientation="vertical">
+
+                        <androidx.constraintlayout.widget.ConstraintLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent">
+
+                            <Spinner
+                                android:id="@+id/classDay"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_marginStart="40dp"
+                                android:layout_marginEnd="40dp"
+                                android:autofillHints="Select Day"
+                                android:minHeight="48dp"
+                                app:layout_constraintEnd_toEndOf="parent"
+                                app:layout_constraintTop_toTopOf="parent"
+                                tools:ignore="SpeakableTextPresentCheck" />
+
+                            <Spinner
+                                android:id="@+id/startTime"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_marginStart="40dp"
+                                android:layout_marginTop="40dp"
+                                android:layout_marginEnd="40dp"
+                                android:minHeight="48dp"
+                                app:layout_constraintEnd_toEndOf="parent"
+                                app:layout_constraintStart_toStartOf="parent"
+                                app:layout_constraintTop_toBottomOf="@+id/classDay"
+                                tools:ignore="SpeakableTextPresentCheck" />
+
+                            <Spinner
+                                android:id="@+id/endTime"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_marginStart="40dp"
+                                android:layout_marginTop="40dp"
+                                android:layout_marginEnd="40dp"
+                                android:minHeight="48dp"
+                                app:layout_constraintStart_toStartOf="parent"
+                                app:layout_constraintTop_toBottomOf="@+id/startTime"
+                                tools:ignore="SpeakableTextPresentCheck" />
+
+                            <Spinner
+                                android:id="@+id/classDifficulty"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_marginStart="40dp"
+                                android:layout_marginTop="40dp"
+                                android:layout_marginEnd="40dp"
+                                android:minHeight="48dp"
+                                app:layout_constraintEnd_toEndOf="parent"
+                                app:layout_constraintStart_toStartOf="parent"
+                                app:layout_constraintTop_toBottomOf="@+id/endTime"
+                                tools:ignore="SpeakableTextPresentCheck" />
+
+                            <EditText
+                                android:id="@+id/maxCap"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_marginStart="40dp"
+                                android:layout_marginTop="40dp"
+                                android:layout_marginEnd="40dp"
+                                android:ems="10"
+                                android:hint="Enter Max Capacity"
+                                android:inputType="textPersonName"
+                                android:minHeight="48dp"
+                                app:layout_constraintEnd_toEndOf="parent"
+                                app:layout_constraintStart_toStartOf="parent"
+                                app:layout_constraintTop_toBottomOf="@+id/classDifficulty" />
+
+                            <Button
+                                android:id="@+id/endClassEdit"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_marginStart="70dp"
+                                android:layout_marginTop="16dp"
+                                android:layout_marginEnd="70dp"
+                                android:text="Complete Edit"
+                                app:layout_constraintEnd_toEndOf="parent"
+                                app:layout_constraintHorizontal_bias="0.0"
+                                app:layout_constraintStart_toStartOf="parent"
+                                app:layout_constraintTop_toBottomOf="@+id/maxCap" />
+
+                            <Button
+                                android:id="@+id/deleteClassButton"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_marginStart="70dp"
+                                android:layout_marginEnd="70dp"
+                                android:backgroundTint="#bf0000"
+                                android:text="Delete Class"
+                                app:layout_constraintEnd_toEndOf="parent"
+                                app:layout_constraintStart_toStartOf="parent"
+                                app:layout_constraintTop_toBottomOf="@+id/endClassEdit" />
+
+                            <Button
+                                android:id="@+id/seeUsersButton"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="See Registered Users"
+                                app:layout_constraintBottom_toBottomOf="parent"
+                                app:layout_constraintEnd_toEndOf="parent"
+                                app:layout_constraintStart_toStartOf="parent"
+                                app:layout_constraintTop_toBottomOf="@+id/deleteClassButton"
+                                app:layout_constraintVertical_bias="0.0" />
+
+                        </androidx.constraintlayout.widget.ConstraintLayout>
+
+                    </LinearLayout>
+                </RelativeLayout>
+            </ScrollView>
+        </RelativeLayout>
+    </ScrollView>
+    <TextView
+        android:id="@+id/noClassesMessageInstructor"
+        android:visibility="gone"
+        android:layout_width="269dp"
+        android:layout_height="48dp"
+        android:layout_marginBottom="356dp"
+        android:text="You have not scheduled any classes"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.498"
+        app:layout_constraintStart_toStartOf="parent" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
